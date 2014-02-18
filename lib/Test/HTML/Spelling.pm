@@ -101,7 +101,7 @@ use Scalar::Util qw( looks_like_number );
 use Search::Tokenizer;
 use Text::Aspell;
 
-use version 0.77; our $VERSION = version->declare('v0.3.1');
+use version 0.77; our $VERSION = version->declare('v0.3.2');
 
 # A placeholder key for the default spellchecker
 
@@ -171,6 +171,7 @@ has 'ignore_words' => (
 
 has 'tester' => (
     is => 'ro',
+    lazy => 1,
     default => sub {
 	my $self = shift;
 	return $self->builder;
@@ -179,6 +180,7 @@ has 'tester' => (
 
 has 'tokenizer' => (
     is => 'rw',
+    lazy => 1,
     default => sub {
 
 	my ($self) = @_;
@@ -196,6 +198,7 @@ has 'tokenizer' => (
 
 has 'parser' => (
     is => 'ro',
+    lazy => 1,
     default => sub {
 	my ($self) = @_;
 
@@ -219,6 +222,7 @@ has 'parser' => (
 has '_spellers' => (
     is		=> 'ro',
     isa		=> 'HashRef',
+    lazy        => 1,
     default	=> sub {
 	my $speller  = Text::Aspell->new();
 	my $self     = { $DEFAULT => $speller, };
@@ -442,7 +446,7 @@ sub _text {
 
 	    my $word  = encode($encoding, $u_word);
 
-	    my $check = $speller->check($word) || looks_like_number($word);
+	    my $check = $speller->check($word) || looks_like_number($word) || $word =~ /^\d+(?:[-'._]\d+)*/;
 	    unless ($check) {
 
 	    	$self->_errors( 1 + $self->_errors );
@@ -529,6 +533,18 @@ The following modules have similar functionality:
 =head1 AUTHOR
 
 Robert Rothenberg, C<< <rrwo at cpan.org> >>
+
+=head2 Contributors and Acknowledgements
+
+=over
+
+=item Rusty Conover
+
+=item Murray Walker
+
+=item Interactive Information, Ltd.
+
+=back
 
 =head1 LICENSE AND COPYRIGHT
 
