@@ -2,7 +2,6 @@
 abstract: 'Test the spelling of HTML documents'
 author:
   - 'Robert Rothenberg, C<< <rrwo at cpan.org> >>'
-  - 'Robert Rothenberg <rrwo@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
   File::Slurp: 0
@@ -11,10 +10,9 @@ build_requires:
   Test::Pod::Spelling: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.59
-  Module::Install: 0
 distribution_type: module
 dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+generated_by: 'Module::Install version 1.08'
 license: artistic2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -40,7 +38,7 @@ requires:
   perl: 5.01
   version: 0.77
 resources:
-  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-HTML-Spelling
+  bugtracker: https://github.com/robrwo/Test-HTML-Spelling/issues
   license: http://www.perlfoundation.org/artistic_license_2_0
   repository: git://github.com/robrwo/Test-HTML-Spelling.git
-version: 0.003003
+version: 0.003004

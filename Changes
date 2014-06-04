@@ -1,5 +1,15 @@
 Revision history for Test-HTML-Spelling
 
+v0.3.4   2014-06-04
+
+       - Tweaked MANIFEST.SKIP rules.
+
+       - Updated bugtracker URL in metadata.
+
+       - Removed QA tests from the distribution.
+
+       - Removed unnecessary dependency from Makefile.PL.
+
 v0.3.3   2014-02-18
 
        - Updated README.

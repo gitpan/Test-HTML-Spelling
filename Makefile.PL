@@ -5,7 +5,6 @@ use inc::Module::Install;
 
 name     'Test-HTML-Spelling';
 all_from 'lib/Test/HTML/Spelling.pm';
-author   q{Robert Rothenberg <rrwo@cpan.org>};
 license  'artistic2';
 
 perl_version 5.010;
@@ -17,12 +16,10 @@ resources (
    #homepage   => 'http://yourwebsitehere.com',
    license    => 'http://www.perlfoundation.org/artistic_license_2_0',
    repository => 'git://github.com/robrwo/Test-HTML-Spelling.git',
-   bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-HTML-Spelling',
+   bugtracker => 'https://github.com/robrwo/Test-HTML-Spelling/issues',
 );
 
-configure_requires (
-   'Module::Install' => 0,
-);
+configure_requires ();
 
 build_requires (
    'Test::More' => 0,
