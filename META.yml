@@ -41,4 +41,4 @@ resources:
   bugtracker: https://github.com/robrwo/Test-HTML-Spelling/issues
   license: http://www.perlfoundation.org/artistic_license_2_0
   repository: git://github.com/robrwo/Test-HTML-Spelling.git
-version: 0.003004
+version: 0.003005
