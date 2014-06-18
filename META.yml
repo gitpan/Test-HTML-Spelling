@@ -35,10 +35,11 @@ requires:
   Test::Builder: 0
   Text::Aspell: 0
   curry: 0
+  namespace::autoclean: 0
   perl: 5.01
   version: 0.77
 resources:
   bugtracker: https://github.com/robrwo/Test-HTML-Spelling/issues
   license: http://www.perlfoundation.org/artistic_license_2_0
   repository: git://github.com/robrwo/Test-HTML-Spelling.git
-version: 0.003005
+version: 0.003006
